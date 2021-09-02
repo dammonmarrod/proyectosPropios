@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPEs Técnico en cuidados auxiliares de enfermería</title>
+  <link rel="stylesheet" type="text/css" href="./css/css_medias.css" media="screen" />
+  <style type="text/css">
+    .container_map_pequeño{
+        display: initial;
+      }
+    .container_map_mediano{
+      display: none;
+    }
+    .container_map_grande{
+      display: none;
+    }
+
+    footer{
+        height: 40vh;
+        background-color: black;
+        margin-top: 5px;
+      }
+    /*Mapa y provincias */
+		.section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px 3px 3px 3px;
+      }
+
+		 .image_map {
+        box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+        width: 100vw;
+
+      }
+
+      .provincias{
+      	color: #3B6A0F;
+        overflow: hidden; /*hidden; hace que el texto que sobresalga por encima del div no sea visible. */
+        box-shadow: 0px 2px 5px 0px white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Los elementos flex son colocados en varias líneas. */
+        justify-content: center; /*Se coloca al principio el margen izquierdo */
+
+      }
+
+      .provincias a{
+      	color: #3B6A0F;
+      }
+
+
+      /* Conjunto con el nombre de las provincias */
+      .sidepanel_inferior{
+        background-color: black;
+        font-weight: bold;
+        text-align: center;
+        font-size: 15px;
+        width: 100vw; /*Ocupar el ancho visible */
+        border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+      }
+
+      .sidepanel_inferior a{
+      	text-decoration: none;
+      }
+      .logo{
+        font-size: 15px;
+      }
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 768 px*/
+    @media only screen and (min-width: 768px) {
+      .container_map_pequeño{
+        display: none;
+      }
+    .container_map_mediano{
+      display: initial;
+    }
+    .sidepanel_inferior{
+      display: none;
+    }
+    .boton_provincias {
+      display: initial;
+    }
+    footer{
+      height: 20vh;
+    }
+    .img_mediano{
+      margin: 10px;
+
+    }
+
+    .container_map_grande{
+      display: none;
+    }
+  
+      .boton_provincias{
+        font-size: 20px;
+      }
+      .logo {
+        font-size: 35px;
+      }
+      .top_navbar a{
+        font-size: 30px;
+      }
+    }/*FIN DEL @MEDIA*/
+
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 992 px*/
+		@media only screen and (min-width: 992px){
+      .logo{
+        font-size: 45px;
+      }
+      .top_navbar a{
+        font-size: 45px;
+      }
+      .popup{
+        position: fixed;
+      }
+
+		}/*FIN DEL @MEDIA*/
+
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 1200 px*/
+		@media only screen and (min-width: 1200px){
+      .container_map_pequeño{
+        display: none;
+      }
+    .container_map_mediano{
+      display: none;
+    }
+    .container_map_grande{
+      display: initial;
+    }
+    .grande{
+      margin: 20px;
+    }
+    .logo{
+      font-size: 90px;
+    }
+    .banner-nav__btn,.boton_provincias {
+      font-size: 35px;
+    }
+		}/*FIN DEL @MEDIA*/
+    
+	</style>
+
+</head>
+<body>
+	<!--HEADER -->
+	<header>
+    <h1 class="logo">BOLSAS DE EMPLEO Y OPOSICIONES DE TCAE</h1>
+
+		<input class="check" type="checkbox" id="check">
+		<label for="check" class="show_menu">
+			&#8801
+		</label>
+
+		<nav class="top_navbar">
+      <a href="https://drive.google.com/file/d/1YvgQd_HbmdX01npeYTLycSl7aAVwKp5r/view?usp=sharing" target="_black">Libro Temario Evangelina</a>
+			<a href="https://drive.google.com/file/d/1XSp7NCcX-DyeC8ezFXwykbxNotKEQFR7/view?usp=sharing" target="_black">Los esquemas de Annightingale</a>
+			<label for="check" class="hidden_menu">
+				&#215
+			</label>
+		</nav>
+	</header>
+	<nav class="bottom__navbar">
+		<ul class="bottom_navbar_container">
+			<!--li with class navbar_item  -->
+			<li class="navbar_item" class="bottom_navbar_item">
+				<!--Enlace modificar en cada página -->
+				<a href="index.html" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="laptop-house" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M272,288H208a16,16,0,0,1-16-16V208a16,16,0,0,1,16-16h64a16,16,0,0,1,16,16v37.12C299.11,232.24,315,224,332.8,224H469.74l6.65-7.53A16.51,16.51,0,0,0,480,207a16.31,16.31,0,0,0-4.75-10.61L416,144V48a16,16,0,0,0-16-16H368a16,16,0,0,0-16,16V87.3L263.5,8.92C258,4,247.45,0,240.05,0s-17.93,4-23.47,8.92L4.78,196.42A16.15,16.15,0,0,0,0,207a16.4,16.4,0,0,0,3.55,9.39L22.34,237.7A16.22,16.22,0,0,0,33,242.48,16.51,16.51,0,0,0,42.34,239L64,219.88V384a32,32,0,0,0,32,32H272ZM629.33,448H592V288c0-17.67-12.89-32-28.8-32H332.8c-15.91,0-28.8,14.33-28.8,32V448H266.67A10.67,10.67,0,0,0,256,458.67v10.66A42.82,42.82,0,0,0,298.6,512H597.4A42.82,42.82,0,0,0,640,469.33V458.67A10.67,10.67,0,0,0,629.33,448ZM544,448H352V304H544Z"></path></svg>
+				</a>
+			</li>
+			<li class="navbar_item" class="bottom_navbar_item">
+				<a href="index.html" class="bottom_navbar_link">
+					<!--Enlace modificar en cada página -->
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+				</a>
+			</li>
+			<li class="navbar_item" class="bottom_navbar_item">
+				<!--Enlace modificar en cada página -->
+				<a href="pagina_andalucia.html" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg>
+				</a>
+			</li>
+			<li class="navbar_item" class="bottom_navbar_item">
+				<a href="https://drive.google.com/drive/folders/1QDlnRPs0er8CLcihvGJKUoHywjxy59HV?usp=sharing" class="bottom_navbar_link" target="_blank">
+					<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-alt" class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!--MAIN -->
+	<main>
+		
+		<section class="banner-nav">
+				<!--Reloj -->
+					<a class="reloj" class="banner-nav__btn" id="reloj"></a>
+
+			<!--Notas personales -->
+					<input class="banner-nav__btn" type="button" onclick="mostrar()"
+      				value="Notas" />  
+      		<div class="popup" id="popup" style="display:none;">  
+					
+					 <!--Formulario para introducir las notas -->
+					    <form> 
+					        <input class="notas" name="todo" type="text" required="required">
+					        <input class="notas" type="submit" value="Añadir Notas">
+					    </form>
+					    <br /> 
+            <!--Notas introducidas-->
+            
+					    <ul id="todos">
+              </ul>
+              <br /> 
+            
+					    <input class="notas" type="button" onclick="esconder();" 
+					        value="Cerrar Notas Personales" />  
+					 </div>
+
+			<!--Enlaces -->
+
+          <a class="banner-nav__btn" href="https://www.juntadeandalucia.es/boja/2019/111/BOJA19-111-00023-8874-01_00157199.pdf"
+          target="_black">Convocatoria BOE</a>
+          <a class="banner-nav__btn" href="pagina_examenes_pdf.html">Examenes</a>
+    </section>
+    <section class="banner-nav">
+      <a class="boton_provincias" href="index.html">INICIO</a>
+      <a class="boton_provincias" href="pagina_andalucia.html">ANDALUCIA</a>
+      <a class="boton_provincias" href="pagina_castillamancha.html">CASTILLA LA MANCHA</a>
+      <a class="boton_provincias" href="pagina_valencia.html">VALENCIA</a>
+      </section>
+      
+
+		<section class="title">
+			<h2>
+        MAPA DE CONVOCATORIAS DE OPOSICIONES
+      </h2>
+		</section>
+
+    
+    <div class="container">
+      <!--Section and Article -->
+        <div class="section">
+          <section>
+            <div class="container_section">
+              <!-- video ejemplo https://www.youtube.com/watch?v=PAfcPIMmQ8Y -->
+              <!--https://www.w3schools.com/tags/att_area_coords.asp -->
+              <!--https://www.image-maps.com/ -->
+              <!--https://imagemap-generator.dariodomi.de/ -->
+              <!--https://es.stackoverflow.com/questions/368064/problemas-para-mostrar-enlaces-del-mapa-actual -->
+              <!--https://www.eldiario.es/consumoclaro/consumo-digital/cinco-aplicaciones-movil-open-source-alternativas-google-maps_1_7959324.html -->
+              <!--https://developers.google.com/maps/?hl=es -->
+              <!--http://liamcurry.com/image-mapper/ ESTE USE -->
+              <!--https://www.image-map.net/-->
+               <!--https://es.stackoverflow.com/questions/368064/problemas-para-mostrar-enlaces-del-mapa-actual -->
+              <p class="container_map_pequeño">
+                <img
+                    class="image_map"
+                    usemap="#map_spain"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a.svg/800px-Comunidades_aut%C3%B3nomas_de_Espa%C3%B1a.svg.png"
+                    alt="imagen del mapa de las provincias de España"
+                  />
+
+                  <map name="map_spain">
+                    <!--Castilla la Mancha-->
+                    <!--
+                      <area
+                      shape="circle"
+                      coords="620, 360, 100"
+                      href="pagina1_castillalamancha.html"
+                      alt="Pagina convocatoria Castilla La mancha"
+                    />
+                    -->
+                   
+                    <!-- Andalucia-->
+                    <!--
+                      <area
+                      shape="circle"
+                      coords="520, 550, 100"
+                      href="pagina_andalucia.html"
+                      alt="Pagina convocatoria Castilla La mancha"
+                    />
+                    -->
+                    
+
+                    <!-- Comunidad Valenciana-->
+                    <!-- 
+                      <area
+                      shape="circle"
+                      coords="820, 350, 60"
+                      href="pagina1_comunidadvalenciana.html"
+                      alt="Pagina convocatoria Castilla La mancha"
+                    />
+                    -->
+                    
+                  </map>
+              </p>
+
+              <p class="container_map_mediano">
+                <img class="img_mediano" usemap="#map" src="https://www.mapasdeespana.com/espana/mapa-espana-comunidades-autonomas.png">
+                <map id="map" name="map">
+                    <area coords="303,549,629,671" href="pagina_andalucia.html" target="_self" alt="">
+                    <area coords="687,309,811,546" href="pagina_valencia.html" target="_self" alt="">
+                    <area coords="432,379,673,509" href="pagina_castillamancha.html" target="_self" alt="">
+                    <area coords="0,0,20,20" href="" target="_blank" alt="">
+                </map>
+              </p>
+
+              <p class="container_map_grande">
+                <img class="grande" usemap="#grande" src="https://www.etapainfantil.com/wp-content/uploads/2021/05/Mapa-politico-Espana.jpg">
+                  <map id="map" name="grande">
+                    <area coords="818,440,973,665" href="pagina_valencia.html" target="_self" alt="Comunidad Valenciana">
+                    <area coords="321,713,733,825" href="pagina_andalucia.html" target="_self" alt="comunidad Autonoma Andalucia">
+                    <area coords="535,496,783,617" href="pagina_castillamancha.html" target="_self" alt="Comunidad Castilla La Mancha">
+                  </map>
+
+                 
+              </p>
+
+
+            </div>
+          </section>
+        </div>
+        <!--Provincias -->
+        <div class="sidepanel_inferior">
+          <div class="provincias" 
+          >
+            <a href="pagina_andalucia.html"
+            ><h3 class="sidepanel__title">Andalucia</h3></a
+          >
+          </div>
+          <div class="provincias">
+            <a href="pagina_castillamancha.html"><h3 class="sidepanel__title">Castilla La Mancha</h3></a
+          >
+          </div>
+          
+          <div class="provincias">
+            <a href="pagina_valencia.html"
+            ><h3 class="sidepanel__title">Comunidad Valenciana</h3></a
+          >
+          </div>
+      </div>
+
+
+	</main>
+
+	<!--FOOTER -->
+	<footer>
+		
+	</footer>
+
+
+</body>
+<script src="./scripts/notas.js"></script>
+<script src="./scripts/reloj.js"></script>
+		<!-- <script src="./scripts/intercambioExamenes.js"></script> -->
+</html>
