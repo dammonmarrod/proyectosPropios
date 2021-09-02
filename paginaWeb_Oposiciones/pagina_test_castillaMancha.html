@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OPEs Técnico en cuidados auxiliares de enfermería</title>
+	  <link rel="stylesheet" type="text/css" href="./css/css_medias.css" media="screen" />
+
+	<style type="text/css">
+		.section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 3px 3px 3px 3px;
+      }
+
+      .tema{
+      	margin-top: 10px;
+      	font-size: 10px;
+      	text-align: center;
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+        background-color: #3B6A0F;
+      }
+      .pregunta{
+      	margin-top: 10px;
+      	padding: 5px;
+      	font-size: 13px;
+      	font-weight: bold;
+      	/*text-align: justify;*/
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+      }
+      .respuestas{
+      	display: flex;
+				flex-direction: column;
+				margin: 20px;
+
+      }
+      .respuestas>div{
+      	margin-top: 10px;
+      }
+      .respuesta_1:hover,.respuesta_2:hover, .respuesta_3:hover, .respuesta_4:hover{
+      	background: #f3fdf5;
+      }
+      .respuestas p{
+      	font-size: 13px;
+				padding: 5px;
+      }
+
+      .todas_las_preguntas{
+      	box-shadow: 0px 2px 5px 0px black;
+				border: 4px solid while;
+				margin: 5px;
+      }
+      .quiz-container{
+      	margin-top: 10px;
+      }
+      .quiz-restart-button{
+      	display: none;
+      }
+      
+
+
+
+
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 768px*/
+		@media only screen and (min-width: 768px){
+			.bottom__navbar{
+				display: none; /*Ocultamos la barra de navegación inferior*/
+			}
+			.top_navbar, .check, .show_menu, .hidden_menu{ /*Mostramos la barra lateral en la versión html*/
+				display: initial;
+			}
+			.boton_provincias{
+				display: initial;
+			}
+			header{
+				height: 150px;
+			}
+			footer{
+					height: 100vh;
+					background-color: black;
+					margin-top: 5px;
+			}
+			.logo{
+				font-size: 55px;
+			}
+			.barner_nav{
+				margin: 10px;
+				border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+			}
+
+		.banner-nav__btn{
+				font-size: 30px;
+			}
+
+			.title{
+					margin-top: 10px;
+					font-size: 30px;
+					text-align: center;
+					background-color: black;
+					color: white;
+					border: 4px solid while;
+					box-shadow: 0px 2px 5px 0px black;
+			}
+			
+			.tema{
+      	margin-top: 10px;
+      	padding: 15px;
+      	font-size: 20px;
+      	text-align: center;
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+        background-color: #3B6A0F;
+      }
+			
+      .pregunta{
+      	margin-top: 10px;
+      	padding: 15px;
+      	font-size: 25px;
+      	font-weight: bold;
+				text-align: center;
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+      }
+
+			.respuestas {
+  		min-height: 100%;
+  		display: flex;
+  		flex-wrap: wrap;
+			flex-direction: row;
+
+		}
+		.respuestas > div {
+  		display: flex; 
+  		flex-basis: calc(50% - 40px);  
+  		justify-content: center;
+  		flex-direction: column;
+
+			width: 90%;
+      padding: 15px;
+      box-shadow: 0px 2px 5px 0px black;
+      border: 4px solid while;
+	}
+		.respuestas > div > div {
+  		display: flex;
+  		justify-content: center;
+  		flex-direction: row;
+		}
+
+
+			/*
+      .respuestas{
+      	min-height: 100%;
+  			display: flex;
+  			flex-wrap: wrap;
+  			flex-direction: row;
+
+      }
+			
+      .respuesta_1_2>div {
+      	width: 90%;
+      	margin: 10px;
+      	padding: 15px;
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+				display: flex; 
+  			flex-basis: calc(50% - 40px);  
+  			justify-content: center;
+  			flex-direction: column;
+      }
+      .respuesta_3_4>div{
+      	padding: 15px;
+      	width: 90%;
+      	margin: 10px;
+      	box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+				display: flex;
+  			justify-content: center;
+  			flex-direction: row;
+      }
+
+			
+
+      .respuestas p{
+      	font-size: 20px;
+				text-align: justify;
+				padding: 5px;
+      }
+
+      .todas_las_preguntas{
+      	box-shadow: 0px 2px 5px 0px black;
+				border: 4px solid while;
+				margin: 5px;
+      }
+*/
+      button{
+      	font-size: 20px;
+				text-align: justify;
+				padding: 5px;
+				box-shadow: 0px 2px 5px 0px black;
+        border: 4px solid while;
+        background-color: #3B6A0F;
+      }
+      .quiz-restart-button{
+      	display: none;
+      }
+
+			#check{/*Evitamos que se vea el check*/
+				display: none;
+			}
+			.show_menu, .hidden_menu{
+				display: block;
+			}
+
+			/*Lo que ocupará cuando lo despleguemos el menú*/
+			.top_navbar{
+			 	position: fixed;
+			 	width: 100%;
+			 	height: 100vh;/*Se adapta a todo el alto posible*/
+			 	background: black;
+			 	right: -100%;/*Si ponemos 100 sale el menú de izq a derecha si ponemos -100 sale de derecha a izquierda*/
+			 	top: 0;
+			 	text-align: center;
+			 	padding: 100px 0px;
+			 	z-index: 100;
+			 	transition: 0.8s;
+			}
+			
+			.top_navbar a{/*Modificar el style de las provincias */
+				margin: 20px;
+				display: block;
+				padding: 20px;
+				color: #3B6A0F;
+				font-weight: 400;
+				font-size: 80px;
+				text-decoration: none; /*Quitamos el subrayado y el azul de los enlaces*/
+				padding: 0 10px;/*10px a la izquierda*/
+				transition: 04s;
+			}
+			.hidden_menu{ /*Desplazar la x a la zona superior derecha*/
+				position: absolute;
+				top: 40px;
+				right: 40px;
+			}
+
+			.show_menu, .hidden_menu{
+				font-size: 80px;
+				cursor: pointer; /*Que se muestre una mano del cursos */
+			}
+			.show_menu{
+				order: 1; /*Set the order of the flexible items*/
+			}
+			.top_navbar a:hover,.show_menu:hover, .hidden_menu:hover,.banner-nav__btn:hover{
+				color: #76CB16;
+			}
+
+			/*HACE QUE EL MENÚ SE OCULTE O SE MUESTRE CUANDO SE SELECCIONA*/
+			#check:checked ~ .top_navbar{/*Cuando el check este chekeado y todos los elementos que preceden a este check se ocultan */
+				right: 0;
+			}
+			.boton_provincias{
+        font-size: 20px;
+      }
+      
+      .top_navbar a{
+        font-size: 30px;
+      }
+      .logo{
+        font-size: 45px;
+      }
+			.title{
+				font-size: 25px;
+			}
+			.pregunta{
+				font-size: 20px;
+			}
+			.grid-item{
+				padding: 5px;
+				text-align: justify;
+				margin: 10px ;
+			}
+		}/*FIN DEL @MEDIA*/
+
+
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 992 px*/
+		@media only screen and (min-width: 992px){
+			.bottom__navbar{
+				display: none; /*Ocultamos la barra de navegación inferior*/
+			}
+			.top_navbar, .check, .show_menu, .hidden_menu{ /*Mostramos la barra lateral en la versión html*/
+				display: initial;
+			}
+			header{
+				height: 200px;
+			}
+			footer{
+					height: 5vh;
+					background-color: black;
+					margin-top: 5px;
+			}
+			.logo{
+				font-size: 55px;
+			}
+			.barner_nav{
+				margin: 10px;
+				border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+			}
+
+			.banner-nav__btn{
+				font-size: 40px;
+			}
+			.title, {
+				border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+			}
+			.top_navbar a{
+        font-size: 45px;
+			}
+			.pregunta{
+				font-size: 25px;
+			}
+			.grid-item{
+				padding: 5px;
+				text-align: justify;
+				margin: 10px ;
+			}
+		}/*FIN DEL @MEDIA*/
+
+
+		/*MEDIA QUERY PARA DISPOSITIVOS GRANDES de más de 1200 px*/
+		@media only screen and (min-width: 1200px){
+		
+			header{
+				height: 200px;
+			}
+			footer{
+					height: 100vh;
+					background-color: black;
+					margin-top: 5px;
+			}
+			.logo{
+				font-size: 80px;
+			}
+			.barner_nav{
+				margin: 10px;
+				border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+			}
+
+			.banner-nav__btn{
+				font-size: 40px;
+			}
+			.title,{
+				border: 4px solid while;
+				box-shadow: 0px 2px 5px 0px black;
+			}
+
+			.pregunta{
+				font-size: 25px;	
+				text-align: justify;
+				background-color: #3B6A0F;
+				color: white;
+			}
+			.grid-item {
+				margin: 10px ;
+				padding-bottom: 5px;
+				font-size: 25px;	
+				text-align: justify;
+			}
+		}/*FIN DEL @MEDIA*/
+
+	</style>
+</head>
+<body>
+	<!--HEADER -->
+	<header>
+		<h1 class="logo">BOLSAS DE EMPLEO Y OPOSICIONES DE TCAE</h1>
+
+		<input class="check" type="checkbox" id="check">
+		<label for="check" class="show_menu">
+			&#8801
+		</label>
+
+		<nav class="top_navbar">
+			<a href="https://drive.google.com/file/d/1YvgQd_HbmdX01npeYTLycSl7aAVwKp5r/view?usp=sharing" target="_black">Libro Temario Evangelina</a>
+			<a href="https://drive.google.com/file/d/1XSp7NCcX-DyeC8ezFXwykbxNotKEQFR7/view?usp=sharing" target="_black">Los esquemas de Annightingale</a>
+			<label for="check" class="hidden_menu">
+				&#215
+			</label>
+		</nav>
+
+	</header>
+	<nav class="bottom__navbar">
+		<ul class="bottom_navbar_container">
+			<!--li with class navbar_item  -->
+			<li class="navbar_item" class="bottom_navbar_item">
+				<!--Enlace modificar en cada página -->
+				<a href="index_map_version2.html" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="laptop-house" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M272,288H208a16,16,0,0,1-16-16V208a16,16,0,0,1,16-16h64a16,16,0,0,1,16,16v37.12C299.11,232.24,315,224,332.8,224H469.74l6.65-7.53A16.51,16.51,0,0,0,480,207a16.31,16.31,0,0,0-4.75-10.61L416,144V48a16,16,0,0,0-16-16H368a16,16,0,0,0-16,16V87.3L263.5,8.92C258,4,247.45,0,240.05,0s-17.93,4-23.47,8.92L4.78,196.42A16.15,16.15,0,0,0,0,207a16.4,16.4,0,0,0,3.55,9.39L22.34,237.7A16.22,16.22,0,0,0,33,242.48,16.51,16.51,0,0,0,42.34,239L64,219.88V384a32,32,0,0,0,32,32H272ZM629.33,448H592V288c0-17.67-12.89-32-28.8-32H332.8c-15.91,0-28.8,14.33-28.8,32V448H266.67A10.67,10.67,0,0,0,256,458.67v10.66A42.82,42.82,0,0,0,298.6,512H597.4A42.82,42.82,0,0,0,640,469.33V458.67A10.67,10.67,0,0,0,629.33,448ZM544,448H352V304H544Z"></path></svg>
+				</a>
+			</li>
+			<li class="navbar_item" class="bottom_navbar_item">
+				<!--Enlace modificar en cada página -->
+				<a href="index_map_version2.html" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-left" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm116-292H256v-70.9c0-10.7-13-16.1-20.5-8.5L121.2 247.5c-4.7 4.7-4.7 12.2 0 16.9l114.3 114.9c7.6 7.6 20.5 2.2 20.5-8.5V300h116c6.6 0 12-5.4 12-12v-64c0-6.6-5.4-12-12-12z"></path></svg>
+				</a>
+			</li>
+
+			<li class="navbar_item" class="bottom_navbar_item">
+			<!--Enlace modificar en cada página -->
+				<a href="pagina2_andalucia.html" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" class="svg_icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg>
+				</a>
+			</li>
+			<li class="navbar_item" class="bottom_navbar_item">
+			<!--Enlace modificar en cada página -->
+				<a href="#" class="bottom_navbar_link">
+					<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-alt" class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!--MAIN -->
+	<main>
+		
+		<section class="banner-nav">
+      <a class="boton_provincias" href="index.html">HOME</a>
+      <a class="boton_provincias" href="pagina_andalucia.html">ANDALUCIA</a>
+      <a class="boton_provincias" href="pagina_castillamancha.html">CASTILLA LA MANCHA</a>
+      <a class="boton_provincias" href="pagina_valencia.html">VALENCIA</a>
+      </section>
+
+		<section class="title">
+			<h2>
+        PREGUNTAS TEST SOBRE CADA TEMA
+      </h2>
+		</section>
+
+		<div class="container">
+      <!--Section and Article -->
+        <div class="section">
+          <section class="todas_las_preguntas" id="todas_las_preguntas">
+        
+            <!--<div class="pregunta">
+            	<p></p>
+            </div>
+          -->
+            
+            <div class="respuestas" >		
+            <!--		
+								<div class="grid-item" ><div></div></div>
+  							<div class="gird-item"><div></div></div>
+  							<div class="grid-item" ><div></div></div>
+  							<div class="grid-item" ><div></div></div>
+            -->
+          	</div>
+          </section>
+
+					<!--
+          <section>
+          	<div class="quiz-container" id="quiz">
+						  <h1 class="quiz-name" id="quiz-name"></h1>
+						  <button id="submit-button">Submit Answers</button>
+						  <button id="next-question-button">Next Question</button>
+						  <button id="prev-question-button">Previous</button>
+						  
+						  <div class="quiz-results" id="quiz-results">
+						    <p id="quiz-results-message"></p>
+						    <p id="quiz-results-score"></p>
+						    <button  class="quiz-restart-button" id="quiz-restart-button"></button>
+						  </div>
+						</div>
+          </section>
+				-->
+        </div>
+       
+      </div>
+	</main>
+
+	<!--FOOTER -->
+	<footer>
+		
+	</footer>
+
+</body>
+<script src="./scripts/test_castillaMancha.js"></script>
+
+</html>
